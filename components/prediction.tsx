@@ -34,7 +34,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
         // Other inputs
         hoursWorkingPerDay: "9",
         logicalQuotientRating: "4",
-        hackathons: "0",
+        hackathons: "1",
         codingSkillsRating: "4",
         publicSpeakingPoints: "8",
         certifications: "shell programming",
@@ -215,7 +215,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.hoursWorkingPerDay}
                                                 onValueChange={(value) => handleChange("hoursWorkingPerDay", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select hours" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -234,7 +234,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.logicalQuotientRating}
                                                 onValueChange={(value) => handleChange("logicalQuotientRating", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select rating" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -250,7 +250,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                         <div className="space-y-2">
                                             <label className="text-sm font-medium">Hackathons</label>
                                             <Select value={formData.hackathons} onValueChange={(value) => handleChange("hackathons", value)}>
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select number" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -269,7 +269,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.codingSkillsRating}
                                                 onValueChange={(value) => handleChange("codingSkillsRating", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select rating" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -288,7 +288,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.publicSpeakingPoints}
                                                 onValueChange={(value) => handleChange("publicSpeakingPoints", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select points" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -307,7 +307,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.extraCourses}
                                                 onValueChange={(value) => handleChange("extraCourses", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -324,14 +324,15 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                 <div className="space-y-6">
                                     <h2 className="text-2xl font-bold text-center mb-6">Interests & Career</h2>
 
-                                    <div className="grid grid-cols-1 gap-6">
-                                        <div className="space-y-2">
+                                    <div className="grid grid-cols-1 gap-6 ">
+                                        <div className="space-y-2 w-full">
                                             <label className="text-sm font-medium">Certifications</label>
+
                                             <Select
                                                 value={formData.certifications}
                                                 onValueChange={(value) => handleChange("certifications", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select certification" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -351,7 +352,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                         <div className="space-y-2">
                                             <label className="text-sm font-medium">Workshops</label>
                                             <Select value={formData.workshops} onValueChange={(value) => handleChange("workshops", value)}>
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select workshop" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -373,7 +374,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.interestedSubjects}
                                                 onValueChange={(value) => handleChange("interestedSubjects", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select subject" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -397,7 +398,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.interestedCareerArea}
                                                 onValueChange={(value) => handleChange("interestedCareerArea", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select career area" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -417,7 +418,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 value={formData.jobOrHigherStudies}
                                                 onValueChange={(value) => handleChange("jobOrHigherStudies", value)}
                                             >
-                                                <SelectTrigger>
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select preference" />
                                                 </SelectTrigger>
                                                 <SelectContent>
