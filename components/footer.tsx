@@ -56,7 +56,7 @@ export default function Footer() {
                                 <p className="text-gray-700">Developed the prediction algorithm and model training pipeline</p>
                                 <div className="flex space-x-2 mt-1">
                                     <Link href="#" className="text-purple-600 hover:text-purple-800">
-                                        <Github className="h-4 w-4" />
+                                        <Github href="https://github.com/Agam-Patel-DS/" className="h-4 w-4" />
                                     </Link>
                                     <Link href="#" className="text-purple-600 hover:text-purple-800">
                                         <Linkedin className="h-4 w-4" />
