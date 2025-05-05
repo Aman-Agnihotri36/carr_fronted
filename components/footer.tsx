@@ -39,6 +39,15 @@ export default function Footer() {
                             The model was trained on data from successful professionals across various tech fields to provide accurate
                             and personalized career recommendations.
                         </p>
+                        <p className="text-gray-700">Training Accuracy - 0.9990443532520097</p>
+
+                        <p className="flex gap-5 items-center text-gray-700">
+                            <span>Project Github Link</span>
+                            <Link href=" https://github.com/Aman-Agnihotri36/carr_fronted" className="text-purple-600 hover:text-purple-800">
+                                <Github className="h-4 w-4" />
+                            </Link>
+
+                        </p>
                     </motion.div>
 
                     {/* Contributors */}
