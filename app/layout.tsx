@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 
 import { Inter, Roboto, Playfair_Display } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
 
 export const inter = Inter({
   subsets: ['latin'], // ✅ Add this line
@@ -19,10 +16,7 @@ export const roboto = Roboto({
   variable: '--font-roboto',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const playfair = Playfair_Display({
   subsets: ['latin'],
