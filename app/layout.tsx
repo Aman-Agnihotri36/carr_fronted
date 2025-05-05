@@ -2,24 +2,12 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Roboto, Playfair_Display } from 'next/font/google';
 
 
 
 
-export const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-roboto',
-});
 
 
-
-export const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-playfair',
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
