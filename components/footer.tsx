@@ -55,10 +55,10 @@ export default function Footer() {
                                 <p className="text-gray-600 text-sm">Machine Learning Engineer</p>
                                 <p className="text-gray-700">Developed the prediction algorithm and model training pipeline</p>
                                 <div className="flex space-x-2 mt-1">
-                                    <Link href="#" className="text-purple-600 hover:text-purple-800">
-                                        <Github href="https://github.com/Agam-Patel-DS/" className="h-4 w-4" />
+                                    <Link href="https://github.com/Agam-Patel-DS/" className="text-purple-600 hover:text-purple-800">
+                                        <Github className="h-4 w-4" />
                                     </Link>
-                                    <Link href="#" className="text-purple-600 hover:text-purple-800">
+                                    <Link href="https://www.linkedin.com/in/iagampatel/" className="text-purple-600 hover:text-purple-800">
                                         <Linkedin className="h-4 w-4" />
                                     </Link>
                                 </div>
@@ -69,24 +69,22 @@ export default function Footer() {
                                 <p className="text-gray-600 text-sm">Frontend Developer</p>
                                 <p className="text-gray-700">Designed and implemented the user interface and experience</p>
                                 <div className="flex space-x-2 mt-1">
-                                    <Link href="#" className="text-purple-600 hover:text-purple-800">
-                                        <Github className="h-4 w-4" />
-                                    </Link>
-                                    <Link href="#" className="text-purple-600 hover:text-purple-800">
-                                        <Twitter className="h-4 w-4" />
+
+                                    <Link href="https://www.linkedin.com/in/aradhy-patel-b8b460302/" className="text-purple-600 hover:text-purple-800">
+                                        <Linkedin className="h-4 w-4" />
                                     </Link>
                                 </div>
                             </div>
 
                             <div className="space-y-1">
                                 <p className="font-semibold text-gray-800">Aman Agnihotri</p>
-                                <p className="text-gray-600 text-sm">Backend Developer</p>
-                                <p className="text-gray-700">Connect fronted with backend</p>
+                                <p className="text-gray-600 text-sm">Frontend & Backend Developer</p>
+                                <p className="text-gray-700">Build and Connect fronted with backend</p>
                                 <div className="flex space-x-2 mt-1">
-                                    <Link href="#" className="text-purple-600 hover:text-purple-800">
+                                    <Link href="https://github.com/Aman-Agnihotri36/" className="text-purple-600 hover:text-purple-800">
                                         <Github className="h-4 w-4" />
                                     </Link>
-                                    <Link href="#" className="text-purple-600 hover:text-purple-800">
+                                    <Link href="https://www.linkedin.com/in/aman-agnihotri-a10292280/" className="text-purple-600 hover:text-purple-800">
                                         <Linkedin className="h-4 w-4" />
                                     </Link>
                                 </div>
