@@ -2,13 +2,10 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Inter, Roboto, Playfair_Display } from 'next/font/google';
+import { Roboto, Playfair_Display } from 'next/font/google';
 
 
 
-export const inter = Inter({
-  subsets: ['latin'], // ✅ Add this line
-});
 
 export const roboto = Roboto({
   subsets: ['latin'],
@@ -37,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      // className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+
       >
         {children}
       </body>
