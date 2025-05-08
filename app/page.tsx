@@ -38,7 +38,7 @@ export default function Home() {
     setPrediction(data?.prediction)  // { prediction: "Some career role" } or error
 
 
-    const responseTwo = await fetch('http://127.0.0.1:5000/recommended-jobs', {
+    const responseTwo = await fetch('https://carr-predict.onrender.com/recommended-jobs', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
