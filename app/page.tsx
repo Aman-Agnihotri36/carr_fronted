@@ -8,6 +8,7 @@ import Footer from "@/components/footer"
 export default function Home() {
   const [prediction, setPrediction] = useState<string | null>(null)
   const [link, setLink] = useState<string | null>(null)
+  const [description, setDescription] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
 
   // eslint-disable-next-line  @typescript-eslint/no-explicit-any
@@ -50,6 +51,25 @@ export default function Home() {
     console.log('YOr Item', item?.recommended_jobs?.Google_Link)
     setLink(item?.recommended_jobs?.Google_Link)
 
+
+    const setObjThree = {
+      role: data?.prediction,
+      data: arr
+    }
+    const responseThree = await fetch('https://carr-predict.onrender.com/get_description', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(setObjThree),
+    });
+
+    const itemtwo = await responseThree.json()
+    setDescription(itemtwo?.prediction)
+    console.log('YOUR DATA', itemtwo)
+
+
+
     setLoading(false)
   }
 
@@ -75,7 +95,7 @@ export default function Home() {
           </motion.div>
 
           {prediction ? (
-            <ResultDisplay link={link || ''} prediction={prediction} onReset={() => setPrediction(null)} />
+            <ResultDisplay description={description || ''} link={link || ''} prediction={prediction} onReset={() => setPrediction(null)} />
           ) : (
             <PredictionForm onSubmit={handlePrediction} loading={loading} />
           )}

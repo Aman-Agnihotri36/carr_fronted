@@ -10,12 +10,13 @@ import Link from "next/link"
 
 
 interface ResultDisplayProps {
+    description: string
     link: string
     prediction: string
     onReset: () => void
 }
 
-export default function ResultDisplay({ prediction, onReset, link }: ResultDisplayProps) {
+export default function ResultDisplay({ prediction, description, onReset, link }: ResultDisplayProps) {
     const [showConfetti, setShowConfetti] = useState(true)
 
     useEffect(() => {
@@ -110,6 +111,9 @@ export default function ResultDisplay({ prediction, onReset, link }: ResultDispl
                             </Button>
                         </Link>
                     </motion.div>
+                </motion.div>
+                <motion.div>
+                    {description}
                 </motion.div>
             </motion.div>
 
