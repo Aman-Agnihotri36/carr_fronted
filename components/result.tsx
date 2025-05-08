@@ -4,13 +4,18 @@ import { Button } from "@/components/ui/button"
 import { RefreshCw } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
+import { Search } from 'lucide-react';
+import JobPopup from "./popup"
+import Link from "next/link"
+
 
 interface ResultDisplayProps {
+    link: string
     prediction: string
     onReset: () => void
 }
 
-export default function ResultDisplay({ prediction, onReset }: ResultDisplayProps) {
+export default function ResultDisplay({ prediction, onReset, link }: ResultDisplayProps) {
     const [showConfetti, setShowConfetti] = useState(true)
 
     useEffect(() => {
@@ -62,39 +67,57 @@ export default function ResultDisplay({ prediction, onReset }: ResultDisplayProp
     }
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="relative flex items-center justify-center"
-        >
-            {renderConfetti()}
+        <>
 
             <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className={`w-full bg-purple-500 rounded-2xl bg-gradient-to-br } shadow-2xl p-16 text-center `}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                className="relative flex items-center justify-center"
             >
-                <motion.h1
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
-                    className="text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-8"
-                >
-                    {prediction}
-                </motion.h1>
+                {renderConfetti()}
 
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.5 }}>
-                    <Button
-                        onClick={onReset}
-                        variant="outline"
-                        className="bg-white/20 backdrop-blur-sm text-white border-white/40 hover:bg-white/30 hover:text-white"
+                <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    className={`w-full bg-purple-500 rounded-2xl bg-gradient-to-br } shadow-2xl p-16 text-center `}
+                >
+                    <motion.h1
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.4, duration: 0.5 }}
+                        className="text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-8"
                     >
-                        <RefreshCw className="h-4 w-4 mr-2" /> Try Again
-                    </Button>
+                        {prediction}
+                    </motion.h1>
+
+                    <motion.div className="flex justify-center gap-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.5 }}>
+                        <Button
+                            onClick={onReset}
+                            variant="outline"
+                            className="bg-white/20 backdrop-blur-sm text-white border-white/40 hover:bg-white/30 hover:text-white"
+                        >
+                            <RefreshCw className="h-4 w-4 mr-2" /> Try Again
+                        </Button>
+                        <Link href={link}>
+                            <Button
+
+                                variant="outline"
+                                className="bg-white/20 backdrop-blur-sm text-white border-white/40 hover:bg-white/30 hover:text-white"
+                            >
+                                <Search className="h-4 w-4 mr-2" /> Find Job
+                            </Button>
+                        </Link>
+                    </motion.div>
                 </motion.div>
             </motion.div>
-        </motion.div>
+
+
+            <JobPopup link={link} jobName={prediction}
+                linkUrl="https://example.com/job-application"
+            />
+        </>
+
     )
 }

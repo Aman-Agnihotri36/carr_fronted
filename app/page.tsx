@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 
 export default function Home() {
   const [prediction, setPrediction] = useState<string | null>(null)
+  const [link, setLink] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
 
   // eslint-disable-next-line  @typescript-eslint/no-explicit-any
@@ -31,7 +32,24 @@ export default function Home() {
 
     const data = await response.json();
     console.log("Yor DATA ", data);
+    const setObj = {
+      role: data?.prediction
+    }
     setPrediction(data?.prediction)  // { prediction: "Some career role" } or error
+
+
+    const responseTwo = await fetch('http://127.0.0.1:5000/recommended-jobs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(setObj),
+    });
+
+    const item = await responseTwo.json()
+    console.log('YOr Item', item?.recommended_jobs?.Google_Link)
+    setLink(item?.recommended_jobs?.Google_Link)
+
     setLoading(false)
   }
 
@@ -57,7 +75,7 @@ export default function Home() {
           </motion.div>
 
           {prediction ? (
-            <ResultDisplay prediction={prediction} onReset={() => setPrediction(null)} />
+            <ResultDisplay link={link || ''} prediction={prediction} onReset={() => setPrediction(null)} />
           ) : (
             <PredictionForm onSubmit={handlePrediction} loading={loading} />
           )}
