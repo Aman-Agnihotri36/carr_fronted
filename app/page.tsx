@@ -6,9 +6,16 @@ import ResultDisplay from "@/components/result"
 import Footer from "@/components/footer"
 
 export default function Home() {
+
+  type CareerData = {
+    "Job/Higher Studies?": string
+    Reasoning: string
+    Recommendations: string[]
+    "Career Tips": string[]
+  }
   const [prediction, setPrediction] = useState<string | null>(null)
   const [link, setLink] = useState<string | null>(null)
-  const [description, setDescription] = useState<string | null>(null)
+  const [description, setDescription] = useState<CareerData[] | null>(null)
   const [loading, setLoading] = useState(false)
 
   // eslint-disable-next-line  @typescript-eslint/no-explicit-any
