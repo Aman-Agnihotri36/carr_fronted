@@ -7,10 +7,13 @@ import { useState, useEffect } from "react"
 import { Search } from 'lucide-react';
 import JobPopup from "./popup"
 import Link from "next/link"
+import { CareerRecommendations } from "./description"
+
 
 
 interface ResultDisplayProps {
-    description: string
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+    description: any
     link: string
     prediction: string
     onReset: () => void
@@ -113,7 +116,7 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                     </motion.div>
                 </motion.div>
                 <motion.div>
-                    {description}
+                    <CareerRecommendations description={description} />
                 </motion.div>
             </motion.div>
 
