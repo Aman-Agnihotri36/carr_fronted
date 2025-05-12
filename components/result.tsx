@@ -115,9 +115,11 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                         </Link>
                     </motion.div>
                 </motion.div>
-                <motion.div>
-                    <CareerRecommendations description={description} />
-                </motion.div>
+
+            </motion.div>
+
+            <motion.div className="mt-10">
+                <CareerRecommendations description={description} />
             </motion.div>
 
 
