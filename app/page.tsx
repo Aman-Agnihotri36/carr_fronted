@@ -59,30 +59,33 @@ export default function Home() {
     setLink(item?.recommended_jobs?.Google_Link)
 
 
-    const setObjThree = {
-      role: data?.prediction,
-      data: arr
-    }
-    const responseThree = await fetch('https://carr-predict.onrender.com/get_description', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(setObjThree),
-    });
+    if (data?.prediction && arr) {
+      const setObjThree = {
+        role: data?.prediction,
+        data: arr
+      }
+      const responseThree = await fetch('https://carr-predict.onrender.com/get_description', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(setObjThree),
+      });
 
-    const itemtwo = await responseThree.json()
-    setDescription(itemtwo?.prediction)
-    console.log('YOUR DATA', itemtwo)
+      const itemtwo = await responseThree.json()
+      setDescription(itemtwo?.prediction)
+      console.log('YOUR DATA', itemtwo)
+    }
 
 
 
     setLoading(false)
   }
+  // bg-gradient-to-b from-purple-50 to-purple-100
 
   return (
     <>
-      <main className="min-h-screen bg-gradient-to-b from-purple-50 to-purple-100 py-12 px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-[url('/header-bg.jpg'))] bg-[#21232a] py-12 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -95,8 +98,8 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Career Path Predictor</h1>
-            <p className="mt-3 text-xl text-gray-600">
+            <h1 className="text-4xl font-extrabold    sm:text-5xl"><span className="text-white">Career</span><span className="text-[#00c497]">Predictor</span></h1>
+            <p className="mt-3 text-xl  text-white">
               Find your ideal tech career path based on your skills and interests
             </p>
           </motion.div>

@@ -9,6 +9,10 @@ body {
 
 }
 
+.subtle-glow {
+  text-shadow: 0 0 4px #32cd32, 0 0 8px #32cd32;
+}
+
 
 @theme inline {
   --color-background: var(--background);
