@@ -10,9 +10,9 @@ export default function Footer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-16 bg-gradient-to-r from-purple-100 to-purple-50 py-12 px-4 sm:px-6 lg:px-8 border-t border-purple-200"
+            className="mt-16 footer py-12 px-4 sm:px-6 lg:px-8  "
         >
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl  mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {/* About the Project */}
                     <motion.div
@@ -22,24 +22,24 @@ export default function Footer() {
                         className="space-y-4"
                     >
                         <h3 className="text-2xl font-bold text-purple-800">How It Works</h3>
-                        <p className="text-gray-700">
+                        <p className="text-white">
                             The Career Path Predictor uses machine learning to analyze your academic performance, skills, and
                             interests to recommend the most suitable tech career path for you.
                         </p>
                         <div className="space-y-2">
                             <p className="text-gray-700 font-medium">Our prediction model considers:</p>
-                            <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                            <ul className="list-disc text-white pl-5  space-y-1">
                                 <li>Academic performance in key technical subjects</li>
                                 <li>Technical skills and proficiency levels</li>
                                 <li>Personal interests and career preferences</li>
                                 <li>Work habits and learning style</li>
                             </ul>
                         </div>
-                        <p className="text-gray-700">
+                        <p className="text-white">
                             The model was trained on data from successful professionals across various tech fields to provide accurate
                             and personalized career recommendations.
                         </p>
-                        <p className="text-gray-700">Training Accuracy - 0.9990443532520097</p>
+                        <p className="text-white">Training Accuracy - 0.9990443532520097</p>
 
                         <p className="flex gap-5 items-center text-gray-700">
                             <span>Project Github Link</span>

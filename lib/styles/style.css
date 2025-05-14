@@ -1,0 +1,27 @@
+/* Global theme variables */
+:root {
+    --bgColor-muted: #161b22;
+    --bgColor-default: #0d1117;
+    --fgColor-attention: #d29922;
+    --fgColor-white: #ffffff;
+}
+
+/* GitHub-like dark theme overrides */
+[data-color-mode="light"][data-light-theme*="dark"],
+[data-color-mode="dark"][data-dark-theme*="dark"] {
+    --color-workflow-card-bg: var(--bgColor-muted);
+    --color-workflow-card-header-shadow: rgba(27, 31, 35, 0.04);
+    --color-bg-discussions-row-emoji-box: #57606a;
+    --color-notifications-row-read-bg: var(--bgColor-default);
+    --color-notifications-row-bg: var(--bgColor-muted);
+    --color-user-mention-fg: var(--fgColor-attention);
+    --color-mktg-btn-shadow-outline: rgba(255, 255, 255, 0.25) 0 0 0 1px inset;
+    --color-marketing-icon-primary: #79c0ff;
+    --color-marketing-icon-secondary: #1f6feb;
+    --color-project-header-bg: #0d1117;
+    --color-project-sidebar-bg: #161b22;
+    --color-project-gradient-in: #161b22;
+    --color-project-gradient-out: rgba(22, 27, 34, 0);
+    --color-diff-blob-selected-line-highlight-mix-blend-mode: screen;
+    --color-text-white: var(--fgColor-white);
+}

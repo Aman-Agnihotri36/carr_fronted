@@ -5,6 +5,9 @@ import PredictionForm from "@/components/prediction"
 import ResultDisplay from "@/components/result"
 import Footer from "@/components/footer"
 
+import "./globals.css";
+
+
 export default function Home() {
 
   type CareerData = {
@@ -85,7 +88,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen bg-[url('/header-bg.jpg'))] bg-[#21232a] py-12 px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen   py-12 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -98,7 +101,7 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl font-extrabold    sm:text-5xl"><span className="text-white">Career</span><span className="text-[#00c497]">Predictor</span></h1>
+            <h1 className="text-4xl font-extrabold  text-white  sm:text-5xl">CareerPredictor</h1>
             <p className="mt-3 text-xl  text-white">
               Find your ideal tech career path based on your skills and interests
             </p>

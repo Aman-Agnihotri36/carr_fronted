@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Slider } from "@/components/ui/slider"
 import { Progress } from "@/components/ui/progress"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import Sli from "./slider"
 
 interface PredictionFormProps {
     // eslint-disable-next-line  @typescript-eslint/no-explicit-any
@@ -70,8 +71,8 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
 
     return (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <Card className="shadow-xl border-0">
-                <CardContent className="p-6">
+            <div ><Card className="shadow-xl black ">
+                <CardContent className="p-6 ">
                     <div className="mb-6">
                         <div className="flex justify-between items-center mb-2">
                             <span className="text-sm font-medium">
@@ -101,11 +102,12 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <span className="text-sm font-bold">{formData.operatingSystemsPercentage}%</span>
                                             </div>
                                             <Slider
-                                                defaultValue={[formData.operatingSystemsPercentage]}
+
+                                                defaultValue={[formData.algorithmsPercentage]}
                                                 max={100}
                                                 min={60}
                                                 step={1}
-                                                onValueChange={(value) => handleSliderChange("operatingSystemsPercentage", value)}
+                                                onValueChange={(value) => handleSliderChange("algorithmsPercentage", value)}
                                             />
                                         </div>
 
@@ -434,14 +436,14 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                     </AnimatePresence>
 
                     <div className="flex justify-between mt-8">
-                        <Button variant="outline" onClick={prevStep} disabled={step === 1} className="flex items-center gap-1">
-                            <ChevronLeft className="h-4 w-4" /> Previous
+                        <Button onClick={prevStep} disabled={step === 1} className="flex bg-transparent  hover:bg-[#25253b] items-center gap-1">
+                            <ChevronLeft className="h-4  w-4" /> Previous
                         </Button>
 
                         <Button
                             onClick={nextStep}
                             disabled={loading}
-                            className="flex items-center gap-1 bg-purple-600 hover:bg-purple-700"
+                            className="flex  !border-0 hover:!bg-[#25253b]  hover:!rounded-[5px] items-center gap-1 black"
                         >
                             {loading ? (
                                 <>
@@ -456,7 +458,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                         </Button>
                     </div>
                 </CardContent>
-            </Card>
+            </Card></div>
         </motion.div>
     )
 }
