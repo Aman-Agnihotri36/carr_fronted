@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Slider } from "@/components/ui/slider"
 import { Progress } from "@/components/ui/progress"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Sli from "./slider"
+
 
 interface PredictionFormProps {
     // eslint-disable-next-line  @typescript-eslint/no-explicit-any
