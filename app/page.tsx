@@ -101,7 +101,7 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl font-extrabold  text-white  sm:text-5xl">CareerPredictor</h1>
+            <h1 className="text-4xl font-extrabold  text-white tracking-wider  sm:text-5xl">Career Predictor</h1>
             <p className="mt-3 text-xl  text-white">
               Find your ideal tech career path based on your skills and interests
             </p>

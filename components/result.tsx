@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { RefreshCw } from "lucide-react"
+import { Loader2, RefreshCw } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Search } from 'lucide-react';
@@ -85,13 +85,13 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className={`w-full bg-purple-500 rounded-2xl bg-gradient-to-br } shadow-2xl p-16 text-center `}
+                    className={`w-full bg-transparent border rounded-2xl bg-gradient-to-br } shadow-2xl p-16 text-center `}
                 >
                     <motion.h1
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.5 }}
-                        className="text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-8"
+                        className="text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 tracking-tight mb-8"
                     >
                         {prediction}
                     </motion.h1>
@@ -119,13 +119,24 @@ export default function ResultDisplay({ prediction, description, onReset, link }
             </motion.div>
 
             <motion.div className="mt-10">
-                <CareerRecommendations description={description} />
+                {
+                    !description ? (
+                        <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
+                            <Loader2 className="h-10 w-10 animate-spin" />
+                            Processing...
+                        </div>
+                    ) : (
+                        <CareerRecommendations description={description} />
+                    )
+                }
+
+
             </motion.div>
 
 
-            <JobPopup link={link} jobName={prediction}
+            {/* <JobPopup link={link} jobName={prediction}
                 linkUrl="https://example.com/job-application"
-            />
+            /> */}
         </>
 
     )

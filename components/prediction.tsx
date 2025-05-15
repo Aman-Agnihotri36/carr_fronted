@@ -239,7 +239,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select rating" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((rating) => (
                                                         <SelectItem key={rating} value={rating.toString()}>
                                                             {rating}
@@ -255,7 +255,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select number" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     {[0, 1, 2, 3, 4, 5, 6].map((num) => (
                                                         <SelectItem key={num} value={num.toString()}>
                                                             {num}
@@ -274,7 +274,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select rating" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((rating) => (
                                                         <SelectItem key={rating} value={rating.toString()}>
                                                             {rating}
@@ -293,7 +293,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select points" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((points) => (
                                                         <SelectItem key={points} value={points.toString()}>
                                                             {points}
@@ -312,7 +312,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     <SelectItem value="yes">Yes</SelectItem>
                                                     <SelectItem value="no">No</SelectItem>
                                                 </SelectContent>
@@ -337,7 +337,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select certification" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     <SelectItem value="shell programming">Shell Programming</SelectItem>
                                                     <SelectItem value="machine learning">Machine Learning</SelectItem>
                                                     <SelectItem value="app development">App Development</SelectItem>
@@ -357,7 +357,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select workshop" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     <SelectItem value="cloud computing">Cloud Computing</SelectItem>
                                                     <SelectItem value="database security">Database Security</SelectItem>
                                                     <SelectItem value="web technologies">Web Technologies</SelectItem>
@@ -379,7 +379,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select subject" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     <SelectItem value="cloud computing">Cloud Computing</SelectItem>
                                                     <SelectItem value="networks">Networks</SelectItem>
                                                     <SelectItem value="hacking">Hacking</SelectItem>
@@ -403,7 +403,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select career area" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     <SelectItem value="system developer">System Developer</SelectItem>
                                                     <SelectItem value="Business process analyst">Business Process Analyst</SelectItem>
                                                     <SelectItem value="developer">Developer</SelectItem>
@@ -423,7 +423,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select preference" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     <SelectItem value="higherstudies">Higher Studies</SelectItem>
                                                     <SelectItem value="job">Job</SelectItem>
                                                 </SelectContent>
@@ -436,14 +436,14 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                     </AnimatePresence>
 
                     <div className="flex justify-between mt-8">
-                        <Button onClick={prevStep} disabled={step === 1} className="flex bg-transparent  hover:bg-[#25253b] items-center gap-1">
+                        <Button onClick={prevStep} disabled={step === 1} className="flex bg-transparent border  hover:bg-[#25253b] items-center gap-1">
                             <ChevronLeft className="h-4  w-4" /> Previous
                         </Button>
 
                         <Button
                             onClick={nextStep}
                             disabled={loading}
-                            className="flex  !border-0 hover:!bg-[#25253b]  hover:!rounded-[5px] items-center gap-1 black"
+                            className="flex bg-transparent border  hover:bg-[#25253b] items-center gap-1 "
                         >
                             {loading ? (
                                 <>

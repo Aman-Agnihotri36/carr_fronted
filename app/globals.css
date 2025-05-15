@@ -22,11 +22,14 @@ body {
   background: #0505219f;
   /* background: linear-gradient(179deg, rgba(1, 1, 8, 1) 0%, rgba(26, 13, 105, 1) 100%); */
   color: white;
-  border: 1px solid #484f58;
+  border: 1px solid #66696d;
   border-radius: 40px;
 }
 
-
+.sel {
+  background: #0505219f;
+  color: white;
+}
 
 
 

@@ -28,12 +28,12 @@ export function CareerRecommendations({ description }: CareerRecommendationsProp
         <div className="space-y-6">
             {dataArray.map((item, index) => (
                 <div key={index} className="space-y-6">
-                    <Card className="border-purple-200 shadow-md">
-                        <CardHeader className="bg-purple-100 dark:bg-purple-900/20">
-                            <div className="flex items-center justify-between">
+                    <Card className="border-purple-200 bg-transparent shadow-md">
+                        <CardHeader className="bg-[#0d0d209f] border-gray-400 text-white ">
+                            <div className="flex items-center 0 justify-between">
                                 <CardTitle className="text-2xl font-bold">Career Path</CardTitle>
                                 {item["Job/Higher Studies?"] && (
-                                    <Badge className="bg-purple-600 hover:bg-purple-700">{item["Job/Higher Studies?"]}</Badge>
+                                    <Badge className="bg-green-600 hover:bg-green-700">{item["Job/Higher Studies?"]}</Badge>
                                 )}
                             </div>
                         </CardHeader>
@@ -41,15 +41,15 @@ export function CareerRecommendations({ description }: CareerRecommendationsProp
                             <div className="space-y-6">
                                 {item.Reasoning && (
                                     <section>
-                                        <h3 className="text-lg font-semibold text-purple-700 dark:text-purple-300 mb-2">Analysis</h3>
-                                        <p className="text-gray-700 dark:text-gray-300">{item.Reasoning}</p>
+                                        <h3 className="text-lg font-semibold text-green-500 dark:text-purple-300 mb-2">Analysis</h3>
+                                        <p className="text-white dark:text-gray-300">{item.Reasoning}</p>
                                     </section>
                                 )}
 
                                 {item.Recommendations && item.Recommendations.length > 0 && (
                                     <section>
-                                        <h3 className="text-lg font-semibold text-purple-700 dark:text-purple-300 mb-2">Recommendations</h3>
-                                        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                                        <h3 className="text-lg font-semibold text-green-500 dark:text-purple-300 mb-2">Recommendations</h3>
+                                        <ul className="list-disc pl-5 space-y-2 text-white dark:text-gray-300">
                                             {item.Recommendations.map((rec, recIndex) => (
                                                 <li key={recIndex}>{rec}</li>
                                             ))}
@@ -59,14 +59,14 @@ export function CareerRecommendations({ description }: CareerRecommendationsProp
 
                                 {item["Career Tips"] && item["Career Tips"].length > 0 && (
                                     <section>
-                                        <h3 className="text-lg font-semibold text-purple-700 dark:text-purple-300 mb-2">Career Tips</h3>
+                                        <h3 className="text-lg font-semibold text-green-500  mb-2">Career Tips</h3>
                                         <div className="grid gap-3 md:grid-cols-1">
                                             {item["Career Tips"].map((tip, tipIndex) => (
                                                 <div
                                                     key={tipIndex}
-                                                    className="p-3 bg-purple-50 dark:bg-purple-900/10 rounded-lg border border-purple-100 dark:border-purple-800"
+                                                    className="p-3  rounded-lg bg-[#0d0d209f] border-gray-400  "
                                                 >
-                                                    <p className="text-gray-700 dark:text-gray-300">{tip}</p>
+                                                    <p className="text-white dark:text-gray-300">{tip}</p>
                                                 </div>
                                             ))}
                                         </div>
