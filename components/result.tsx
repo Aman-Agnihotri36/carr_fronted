@@ -5,7 +5,7 @@ import { Loader2, RefreshCw } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Search } from 'lucide-react';
-import JobPopup from "./popup"
+
 import Link from "next/link"
 import { CareerRecommendations } from "./description"
 
