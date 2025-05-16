@@ -22,21 +22,21 @@ export default function Footer() {
                     className="space-y-4 "
                 >
                     <h3 className="text-2xl font-bold text-white">Contributors</h3>
-                    <div className="flex gap-10 justify-between">
+                    <div className="flex gap-10 justify-between flex-wrap">
                         <div className="space-y-1">
-                            <p className="font-semibold text-green-800">Agam Patel</p>
+                            <p className="font-semibold text-green-400">Agam Patel</p>
                             <p className="text-gray-600 text-sm">Roll No - 0205CC221015</p>
 
                         </div>
 
                         <div className="space-y-1">
-                            <p className="font-semibold text-green-800">Aradhya Patel</p>
+                            <p className="font-semibold text-green-400">Aradhya Patel</p>
                             <p className="text-gray-600 text-sm">Roll No - 0205CC221015</p>
 
                         </div>
 
                         <div className="space-y-1">
-                            <p className="font-semibold text-green-800">Aman Agnihotri</p>
+                            <p className="font-semibold text-green-400">Aman Agnihotri</p>
                             <p className="text-gray-600 text-sm">Roll No - 0205CC221019</p>
 
                         </div>

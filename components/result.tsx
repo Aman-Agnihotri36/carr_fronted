@@ -91,7 +91,7 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.5 }}
-                        className="text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 tracking-tight mb-8"
+                        className="text-4xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-lime-400 to-emerald-600 tracking-tight mb-8"
                     >
                         {prediction}
                     </motion.h1>
