@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Search } from 'lucide-react';
 
-import Link from "next/link"
+
 import { CareerRecommendations } from "./description"
 
 
