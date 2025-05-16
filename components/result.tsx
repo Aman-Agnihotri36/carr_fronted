@@ -104,7 +104,7 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                         >
                             <RefreshCw className="h-4 w-4 mr-2" /> Try Again
                         </Button>
-                        <Link href={link}>
+                        {/* <Link href={link}>
                             <Button
 
                                 variant="outline"
@@ -112,7 +112,19 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                             >
                                 <Search className="h-4 w-4 mr-2" /> Find Job
                             </Button>
-                        </Link>
+                        </Link> */}
+                        <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button
+                                variant="outline"
+                                className="bg-white/20 backdrop-blur-sm text-white border-white/40 hover:bg-white/30 hover:text-white"
+                            >
+                                <Search className="h-4 w-4 mr-2" /> Find Job
+                            </Button>
+                        </a>
                     </motion.div>
                 </motion.div>
 
