@@ -27,7 +27,7 @@ body {
 }
 
 .sel {
-  background: #0505219f;
+  background: linear-gradient(179deg, rgb(36, 36, 81) 0%, rgb(9, 3, 47) 100%);
   color: white;
 }
 

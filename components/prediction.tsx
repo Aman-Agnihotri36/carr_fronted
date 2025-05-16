@@ -220,7 +220,7 @@ export default function PredictionForm({ onSubmit, loading }: PredictionFormProp
                                                 <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Select hours" />
                                                 </SelectTrigger>
-                                                <SelectContent>
+                                                <SelectContent className="sel">
                                                     {[4, 5, 6, 7, 8, 9, 10, 11, 12].map((hours) => (
                                                         <SelectItem key={hours} value={hours.toString()}>
                                                             {hours} hours

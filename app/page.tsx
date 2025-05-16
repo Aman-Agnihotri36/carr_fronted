@@ -8,6 +8,7 @@ import Footer from "@/components/footer"
 import "./globals.css";
 
 
+
 export default function Home() {
 
   type CareerData = {
@@ -113,8 +114,11 @@ export default function Home() {
             <PredictionForm onSubmit={handlePrediction} loading={loading} />
           )}
         </motion.div>
+
       </main>
+
       <Footer />
+
     </>
   )
 }
