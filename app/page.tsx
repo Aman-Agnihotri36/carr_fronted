@@ -4,7 +4,7 @@ import { useState } from "react"
 import PredictionForm from "@/components/prediction"
 import ResultDisplay from "@/components/result"
 import Footer from "@/components/footer"
-import job from "@/lib/cron"
+
 import "./globals.css";
 
 
