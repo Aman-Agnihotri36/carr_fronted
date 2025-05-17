@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import PredictionForm from "@/components/prediction"
 import ResultDisplay from "@/components/result"
 import Footer from "@/components/footer"
@@ -11,9 +11,7 @@ import "./globals.css";
 
 export default function Home() {
 
-  useEffect(() => {
-    job.start()
-  }, [])
+
   type CareerData = {
     "Job/Higher Studies?": string
     Reasoning: string
