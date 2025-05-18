@@ -87,12 +87,14 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                     transition={{ delay: 0.2, duration: 0.5 }}
                     className={`w-full bg-transparent border rounded-2xl bg-gradient-to-br } shadow-2xl p-16 text-center `}
                 >
+                    <p className="text-white text-2xl"> The best job for you is in</p>
                     <motion.h1
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.5 }}
                         className="text-3xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-lime-400 to-emerald-600 tracking-tight mb-8"
                     >
+
                         {prediction}
                     </motion.h1>
 
