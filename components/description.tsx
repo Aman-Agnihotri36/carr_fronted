@@ -29,7 +29,7 @@ export function CareerRecommendations({ description }: CareerRecommendationsProp
             {dataArray.map((item, index) => (
                 <div key={index} className="space-y-6">
                     <Card className="border-purple-200 bg-transparent shadow-md">
-                        <CardHeader className="bg-[#0d0d209f] border-gray-400 text-white ">
+                        <CardHeader className="bg-[#202028eb] border-gray-400 text-white ">
                             <div className="flex items-center 0 justify-between">
                                 <CardTitle className="text-2xl font-bold">Career Path</CardTitle>
                                 {item["Job/Higher Studies?"] && (
@@ -64,7 +64,7 @@ export function CareerRecommendations({ description }: CareerRecommendationsProp
                                             {item["Career Tips"].map((tip, tipIndex) => (
                                                 <div
                                                     key={tipIndex}
-                                                    className="p-3  rounded-lg bg-[#0d0d209f] border-gray-400  "
+                                                    className="p-3  rounded-lg bg-[#202028eb] border-gray-400  "
                                                 >
                                                     <p className="text-white dark:text-gray-300">{tip}</p>
                                                 </div>
