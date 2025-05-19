@@ -21,23 +21,23 @@ export default function Footer() {
                     transition={{ delay: 0.4, duration: 0.5 }}
                     className="space-y-4 "
                 >
-                    <h3 className="text-2xl font-bold text-white">Contributors</h3>
+                    <h3 className="text-2xl font-bold text-white">Developers</h3>
                     <div className="flex gap-10 justify-between flex-wrap">
                         <div className="space-y-1">
                             <p className="font-semibold text-green-400">Agam Patel</p>
-                            <p className="text-gray-600 text-sm">Roll No - 0205CC221015</p>
+                            <p className="text-gray-600 text-sm">Roll No. 0205CC221015</p>
 
                         </div>
 
                         <div className="space-y-1">
-                            <p className="font-semibold text-green-400">Aradhya Patel</p>
-                            <p className="text-gray-600 text-sm">Roll No - 0205CC221015</p>
+                            <p className="font-semibold text-green-400">Aradhy Patel</p>
+                            <p className="text-gray-600 text-sm">Roll No. 0228CS221043</p>
 
                         </div>
 
                         <div className="space-y-1">
                             <p className="font-semibold text-green-400">Aman Agnihotri</p>
-                            <p className="text-gray-600 text-sm">Roll No - 0205CC221019</p>
+                            <p className="text-gray-600 text-sm">Roll No. 0205CC221019</p>
 
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export default function Footer() {
                 <p className="text-gray-600 text-sm">
                     &copy; {new Date().getFullYear()} Career Path Predictor. All rights reserved.
                 </p>
-                <p className="text-gray-500 text-xs mt-1">Made with ❤️ for aspiring tech professionals</p>
+                <p className="text-gray-300 text-xs mt-1">Made with ❤️ for aspiring tech professionals</p>
             </motion.div>
 
         </motion.footer >

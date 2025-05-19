@@ -88,7 +88,7 @@ export default function ResultDisplay({ prediction, description, onReset, link }
                     className={`w-full bg-transparent border rounded-2xl bg-gradient-to-br } shadow-2xl p-16 text-center `}
                 >
                     {
-                        prediction ? (<p className=" text-2xl bg-gradient-to-r from-gray-400 via-gray-500 to-gray-700 bg-clip-text text-transparent font-semibold"> The best job for you is in</p>) : null
+                        prediction ? (<p className=" text-2xl text-white"> The best job for you is in</p>) : null
                     }
                     <motion.h1
                         initial={{ y: 20, opacity: 0 }}
